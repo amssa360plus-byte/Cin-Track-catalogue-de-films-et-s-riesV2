@@ -158,4 +158,4 @@ localStorage.setItem("fav", JSON.stringify(datamovie));
 
 ## 👤 Auteur
 
-Projet réalisé par **<jawad amsa>**.
+Projet réalisé par **jawad amsa**     
