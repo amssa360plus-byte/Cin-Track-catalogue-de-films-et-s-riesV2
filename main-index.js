@@ -2,7 +2,7 @@ const listcontair = document.querySelector("#list")
 const task = document.querySelector("#task")
 async function getuser() {
   const response = await fetch(
-    "https://raw.githubusercontent.com/ouchad97/cinetrack-api/main/cinetrack-data.json"
+    `https://6afae847730c1d152f32b6cc.mockapi.io/moviesv2`
   );
   
    const movies = await response.json();
