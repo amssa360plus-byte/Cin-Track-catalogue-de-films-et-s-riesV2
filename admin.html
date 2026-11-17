@@ -7,21 +7,57 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+   <!-- JS -->
    <script src="admin.js"></script>
+   <script src="data.admin.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body class="bg-black">
     <header > 
         <div>
+            <!-- logo d page  -->
+       <a href="index.html" class="flex flex justify-center relative right-10">
         <img src="imgadmins/Duck-ai-image-2026-11-16-14-58-removebg-preview.png"
               alt="logo_admins"
-              class="w-33 relative left-10">
+              class="w-33 relative left-10"
+              herf="index.html">
+              </a>
               </div>
-              <div><a href="index.html" class="flex flex-row-reverse relative right-10 bottom-20"><img class="w-15 relative bottom-5" src="imgadmins/house-solid.png" alt="house"></a></div>
     </header>
     <main>
-        <div class=""></div>
+        <!-- border data  -->
+         <!-- <div class="grid-cols-4 gap-4">
+        <div class=" border-solid-red bg-red-600 rounded-xl" id="borderdata">
+        </div>
+        </div> -->
+
+        <!-- <div class="grid grid-cols-4 gap-4 border-2 border-solid-red  rounded-xl"  id="borderdata">
+            <div class="bg-red-600">
+                <h3>test<h3>
+            </div>
+        </div> -->
+      <div class="overflow-hidden rounded-xl border border-zinc-800">
+
+    <table class="w-full text-left">
+
+        <thead class="bg-zinc-900 text-gray-400 uppercase text-sm">
+            <tr>
+                <th class="px-6 py-4">ID</th>
+                <th class="px-6 py-4">Movie Title</th>
+            </tr>
+        </thead>
+
+        <tbody id="borderdata"
+            class="bg-black text-white divide-y divide-zinc-800">
+        </tbody>
+
+    </table>
+
+</div>
+<div></div>
     </main>
 </body>
 </html>
