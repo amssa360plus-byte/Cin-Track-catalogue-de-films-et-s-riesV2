@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin-mv33</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 
-   <!-- JS -->
-   <script src="admin.js"></script>
-   <script src="data.admin.js"></script>
+    <!-- JS -->
+    <script src="data.admin.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
+
 <body class="bg-black">
-    <header > 
+    <header>
         <div>
             <!-- logo d page  -->
-       <a href="index.html" class="flex flex justify-center relative right-10">
-        <img src="imgadmins/Duck-ai-image-2026-11-16-14-58-removebg-preview.png"
-              alt="logo_admins"
-              class="w-33 relative left-10"
-              herf="index.html">
-              </a>
-              </div>
+            <a href="index.html" class="flex flex justify-center relative right-10">
+                <img src="imgadmins/Duck-ai-image-2026-11-16-14-58-removebg-preview.png" alt="logo_admins"
+                    class="w-33 relative left-10" herf="index.html">
+            </a>
+        </div>
     </header>
     <main>
         <!-- border data  -->
-         <!-- <div class="grid-cols-4 gap-4">
+        <!-- <div class="grid-cols-4 gap-4">
         <div class=" border-solid-red bg-red-600 rounded-xl" id="borderdata">
         </div>
         </div> -->
@@ -39,25 +40,51 @@
                 <h3>test<h3>
             </div>
         </div> -->
-      <div class="overflow-hidden rounded-xl border border-zinc-800">
 
-    <table class="w-full text-left">
+        <!-- tableu -->
+        <div class="overflow-hidden rounded-xl border border-zinc-800">
 
-        <thead class="bg-zinc-900 text-gray-400 uppercase text-sm">
-            <tr>
-                <th class="px-6 py-4">ID</th>
-                <th class="px-6 py-4">Movie Title</th>
-            </tr>
-        </thead>
+            <table class="w-full text-left">
 
-        <tbody id="borderdata"
-            class="bg-black text-white divide-y divide-zinc-800">
-        </tbody>
+                <thead class="bg-zinc-900 text-gray-400 uppercase text-sm">
+                    <tr>
+                        <th class="px-6 py-4">ID</th>
+                        <th class="px-6 py-4">Movie Title</th>
+                    </tr>
+                </thead>
 
-    </table>
+                <tbody id="borderdata" class="bg-black text-white divide-y divide-zinc-800">
+                </tbody>
 
-</div>
-<div></div>
+            </table>
+            <!-- button -->
+        </div>
+        <div class="gap-3">
+            <button class="bg-red-600 rounded-xl w-20 relative left-82" id="btn-delete"><i
+                    class="fa-solid fa-trash"></i>delete</button>
+        </div>
+        <!-- modal delete  -->
+        <div class="modal-popup" id="modal-popupd_delete">
+            <div class="modal-popup-content border-2 border-solid bg-black">
+            </div>
+        </div>
+        <div class="fixed inset-0 z-50 items-center justify-items-end bg-black/80 hidden" id="deletecard">
+            <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+                <div class="block w-full max-w-sm rounded-xl border-2 border-red-600 bg-white p-6 text-black">
+                    <a id="exitdelete"><i class="fa-solid fa-circle-xmark" style="color: rgb(196, 17, 17);"></i></a>
+                    <h5 class="mb-3 text-2xl font-semibold leading-8 text-red-600">
+                        remove with id
+                    </h5>
+                    <p class="text-gray-600">
+                        entre id do you want remove
+                    </p>
+                    <input type="text" placeholder="   entre id do you want" class="border-4 border-red-600 rounded-xl" id="input1">
+                    <button class="border-4 border-red-600 rounded-xl bg-red-600 w-20 hover:bg-red-800" id="confirme_delete">confirme</button>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
+    <script src="admin.js"></script>
+
 </html>
