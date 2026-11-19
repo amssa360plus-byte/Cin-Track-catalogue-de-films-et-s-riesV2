@@ -1,4 +1,4 @@
-async function update(id, upadateinformation) {
+export async function update(id, upadateinformation) {
     try{
         const response = await fetch(`https://6afae847730c1d152f32b6cc.mockapi.io/moviesv2/${id}`,  {
             method:"PUT",
@@ -18,4 +18,3 @@ async function update(id, upadateinformation) {
         console.error(error)
     }
 }
-update(8, {title:"jawad"})

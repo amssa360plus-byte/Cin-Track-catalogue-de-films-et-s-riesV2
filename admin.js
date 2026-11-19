@@ -39,3 +39,6 @@ confirme_delete.addEventListener("click", ()=>{
   const idINput = input1.value
   deletedata(idINput) 
 })
+
+
+
