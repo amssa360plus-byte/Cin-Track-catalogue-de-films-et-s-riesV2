@@ -60,28 +60,50 @@
 
             </table>
             <!-- button -->
-        </div>
-        <div class="gap-3">
-            <button class="bg-red-600 rounded-xl w-20 relative left-82" id="btn-delete"><i
-                    class="fa-solid fa-trash"></i>ADD MOVIE</button>
-        </div>
-        <!-- modal delete  -->
+            </div>
+            <div class="gap-3">
+                <button class="bg-red-600 rounded-xl w-20 w-[80vw] h-10 flex justify-center relative left-40" id="btn-delete">
+                    <i class="fa-solid fa-plus relative top-3"></i><h3 class="relative top-2">ADD MOVIE</h3></button>
+            </div>
+        <!-- modal add movie  -->
         <div class="modal-popup" id="modal-popupd_delete">
             <div class="modal-popup-content border-2 border-solid bg-black">
             </div>
         </div>
-        <div class="fixed inset-0 z-50 items-center justify-items-end bg-black/80 hidden" id="deletecard">
+        <div class="fixed inset-0 z-50 items-center justify-items-end bg-black/80" id="deletecard">
             <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-                <div class="block w-full max-w-sm rounded-xl border-2 border-red-600 bg-white p-6 text-black">
+                <div class="block w-full max-w-sm rounded-xl border-2 border-red-600 bg-white p-6 text-black" class="allinput"> 
+                    <!-- lfok rah fih id  -->
                     <a id="exitdelete"><i class="fa-solid fa-circle-xmark" style="color: rgb(196, 17, 17);"></i></a>
-                    <h5 class="mb-3 text-2xl font-semibold leading-8 text-red-600">
-                        remove with id
+                    <h5 class="mb-3 text-2xl font-semibold leading-8 text-red-600 flex justify-center">
+                        add Movie
                     </h5>
-                    <p class="text-gray-600">
-                        entre id do you want remove
+                    <p class="text-gray-600 flex justify-center">
+                        title Movie
                     </p>
-                    <input type="text" placeholder="   entre id do you want" class="border-4 border-red-600 rounded-xl" id="input1">
-                    <button class="border-4 border-red-600 rounded-xl bg-red-600 w-20 hover:bg-red-800" id="confirme_delete">confirme</button>
+                    <input type="text" placeholder="   entre name MOVIE" class="border-4 border-red-600 rounded-xl w-[350px]" id="input1">
+                    <p class="text-gray-600 flex justify-center">
+                        derctions
+                    </p>
+                    <input type="text" placeholder="   entre name derctions" class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                     <p class="text-gray-600 flex justify-center">
+                        years movie 
+                    </p>
+                    <input type="text" placeholder="   entre Year" class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                    <p class="text-gray-600 flex justify-center">
+                        gernes
+                    </p>
+                    <input type="text" placeholder="   entre gernes" class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                    <p class="text-gray-600 flex justify-center">
+                        production countries
+                    </p>
+                    <input type="text" placeholder="   production countriesn EX : MA, UK" class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                     <p class="text-gray-600 flex justify-center">
+                        image 
+                    </p>
+                    <input type="text" placeholder="   entre link image EX: https:/example.com" class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                </div>
+            </div>
                 </div>
             </div>
         </div>
@@ -118,6 +140,7 @@
                     </p>
                     <input type="text" placeholder="  entre link image " class="border-4 border-red-600 rounded-xl" id="inputimage">
                     <button class="border-4 border-red-600 rounded-xl bg-red-600 w-20 hover:bg-red-800" id="confirme_image">confirme</button>
+                    
                 </div>
             </div>
         </div>
