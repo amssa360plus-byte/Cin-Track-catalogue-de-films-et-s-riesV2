@@ -29,3 +29,6 @@ async function newmovies(title, directors, releaseYear, genres, production, imag
     // newmovies(
     //     "MAXVER", "JAWAD", 2021, "F1", "FIA", "https://m.media-amazon.com/images/M/MV5BNmVhZmQxY2QtNzQ1My00ODAyLTlmZDUtOWE0YjdiYTAxMGRlXkEyXkFqcGc@._V1_.jpg", "BEST DRIVER"
     // )
+
+
+    // all Inpute

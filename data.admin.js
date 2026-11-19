@@ -70,8 +70,21 @@ async function getmovies() {
                     const idINput = INPUTimagelink.value.trim()
                     update(btn.dataset.id, { image: idINput })
                 }
+
+                
             })
         })
+        const btn_addmovie = document.querySelector("#addmovie")
+    const btn_addmovieback = document.querySelector("#btn_addmovieback")
+    btn_addmovieback.addEventListener("click",()=>{
+        btn_addmovie.classList.remove("hidden")
+    const exit = document.querySelector("#exitdadd")
+    exit.addEventListener("click", ()=>{
+        btn_addmovie.classList.add("hidden")
+    })
+    
+    })
+    
 
     }
     catch (error) {
