@@ -60,92 +60,124 @@
 
             </table>
             <!-- button -->
-            </div>
-            <div class="gap-3">
-                <button class="bg-red-600 rounded-xl w-20 w-[80vw] h-10 flex justify-center relative left-40" id="btn-delete">
-                    <i class="fa-solid fa-plus relative top-3"></i><h3 class="relative top-2">ADD MOVIE</h3></button>
-            </div>
+        </div>
+        <div class="gap-3">
+            <button class="bg-red-600 rounded-xl w-20 w-[80vw] h-10 flex justify-center relative left-40"
+                id="btn-delete">
+                <i class="fa-solid fa-plus relative top-3"></i>
+                <h3 class="relative top-2">ADD MOVIE</h3>
+            </button>
+        </div>
         <!-- modal add movie  -->
         <div class="modal-popup" id="modal-popupd_delete">
             <div class="modal-popup-content border-2 border-solid bg-black">
             </div>
         </div>
-        <div class="fixed inset-0 z-50 items-center justify-items-end bg-black/80" id="deletecard">
+        <div class="fixed inset-0 z-50 items-center justify-items-end bg-black/80 " id="deletecard">
             <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-                <div class="block w-full max-w-sm rounded-xl border-2 border-red-600 bg-white p-6 text-black" class="allinput"> 
+                <div class="block w-full max-w-sm rounded-xl border-2 border-red-600 bg-white p-6 text-black"
+                    class="allinput">
                     <!-- lfok rah fih id  -->
                     <a id="exitdelete"><i class="fa-solid fa-circle-xmark" style="color: rgb(196, 17, 17);"></i></a>
                     <h5 class="mb-3 text-2xl font-semibold leading-8 text-red-600 flex justify-center">
                         add Movie
                     </h5>
                     <p class="text-gray-600 flex justify-center">
+                        ID
+                    </p>
+                    <input type="text" placeholder="   entre id"
+                        class="border-4 border-red-600 rounded-xl w-[350px]" id="input1">
+                    <p class="text-gray-600 flex justify-center">
                         title Movie
                     </p>
-                    <input type="text" placeholder="   entre name MOVIE" class="border-4 border-red-600 rounded-xl w-[350px]" id="input1">
+                    <input type="text" placeholder="   entre name MOVIE"
+                        class="border-4 border-red-600 rounded-xl w-[350px]" id="input1">
                     <p class="text-gray-600 flex justify-center">
                         derctions
                     </p>
-                    <input type="text" placeholder="   entre name derctions" class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
-                     <p class="text-gray-600 flex justify-center">
-                        years movie 
+                    <input type="text" placeholder="   entre name derctions"
+                        class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                    <p class="text-gray-600 flex justify-center">
+                        years movie
                     </p>
-                    <input type="text" placeholder="   entre Year" class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                    <input type="text" placeholder="   entre Year" class="border-4 border-red-600 rounded-xl  w-[350px]"
+                        id="input1">
                     <p class="text-gray-600 flex justify-center">
                         gernes
                     </p>
-                    <input type="text" placeholder="   entre gernes" class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                    <input type="text" placeholder="   entre gernes"
+                        class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
                     <p class="text-gray-600 flex justify-center">
                         production countries
                     </p>
-                    <input type="text" placeholder="   production countriesn EX : MA, UK" class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
-                     <p class="text-gray-600 flex justify-center">
-                        image 
+                    <input type="text" placeholder="   production countriesn EX : MA, UK"
+                        class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                    <p class="text-gray-600 flex justify-center">
+                        image
                     </p>
-                    <input type="text" placeholder="   entre link image EX: https:/example.com" class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
-                </div>
-            </div>
+                    <input type="text" placeholder="   entre link image EX: https:/example.com"
+                        class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                    <p class="text-gray-600 flex justify-center">
+                        description
+                    </p>
+                    <textarea id="description" name="description" rows="3"
+                        placeholder="Description du film ou de la série..."
+                        class="border-4 border-red-600 rounded-xl w-[350px]"></textarea>
+                    <button
+                        class="border border-red rounded-xl bg-red-500 w-87 h-10 relative top-3 hover: bg-red-800">DONE</button>
                 </div>
             </div>
         </div>
+        </div>
+        </div>
 
         <!-- moadl modification -->
-         <div class="modal-popup" id="modal-popupd_modification">
+        <div class="modal-popup" id="modal-popupd_modification">
             <div class="modal-popup-content border-2 border-solid bg-black">
             </div>
         </div>
         <div class="fixed inset-0 z-50 items-center justify-items-end bg-black/80 hidden " id="modificationb_btn">
             <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
                 <div class="block w-full max-w-sm rounded-xl border-2 border-red-600 bg-white p-6 text-black">
-                    <a id="exitmodification"><i class="fa-solid fa-circle-xmark" style="color: rgb(196, 17, 17);"></i></a>
+                    <a id="exitmodification"><i class="fa-solid fa-circle-xmark"
+                            style="color: rgb(196, 17, 17);"></i></a>
                     <h5 class="mb-3 text-2xl font-semibold leading-8 text-red-600">
-                       || modification ||   
+                        || modification ||
                     </h5>
                     <p class="text-gray-600">
                         modification title
                     </p>
-                    <input type="text" placeholder="  entre title do you want " class="border-4 border-red-600 rounded-xl" id="inputtitle">
-                    <button class="border-4 border-red-600 rounded-xl bg-red-600 w-20 hover:bg-red-800" id="confirme_title">confirme</button>
-                     <p class="text-gray-600">  
+                    <input type="text" placeholder="  entre title do you want "
+                        class="border-4 border-red-600 rounded-xl" id="inputtitle">
+                    <button class="border-4 border-red-600 rounded-xl bg-red-600 w-20 hover:bg-red-800"
+                        id="confirme_title">confirme</button>
+                    <p class="text-gray-600">
                         modification year
                     </p>
-                    <input type="text" placeholder="  entre year  " class="border-4 border-red-600 rounded-xl" id="inputyear">
-                    <button class="border-4 border-red-600 rounded-xl bg-red-600 w-20 hover:bg-red-800" id="confirme_year">confirme</button>
-                     <p class="text-gray-600">
+                    <input type="text" placeholder="  entre year  " class="border-4 border-red-600 rounded-xl"
+                        id="inputyear">
+                    <button class="border-4 border-red-600 rounded-xl bg-red-600 w-20 hover:bg-red-800"
+                        id="confirme_year">confirme</button>
+                    <p class="text-gray-600">
                         modification direaction
                     </p>
-                    <input type="text" placeholder="  entre dereactoion name  " class="border-4 border-red-600 rounded-xl" id="inputdir">
-                    <button class="border-4 border-red-600 rounded-xl bg-red-600 w-20 hover:bg-red-800" id="confirme_deriction">confirme</button>
-                     <p class="text-gray-600">
-                        image 
+                    <input type="text" placeholder="  entre dereactoion name  "
+                        class="border-4 border-red-600 rounded-xl" id="inputdir">
+                    <button class="border-4 border-red-600 rounded-xl bg-red-600 w-20 hover:bg-red-800"
+                        id="confirme_deriction">confirme</button>
+                    <p class="text-gray-600">
+                        image
                     </p>
-                    <input type="text" placeholder="  entre link image " class="border-4 border-red-600 rounded-xl" id="inputimage">
-                    <button class="border-4 border-red-600 rounded-xl bg-red-600 w-20 hover:bg-red-800" id="confirme_image">confirme</button>
-                    
+                    <input type="text" placeholder="  entre link image " class="border-4 border-red-600 rounded-xl"
+                        id="inputimage">
+                    <button class="border-4 border-red-600 rounded-xl bg-red-600 w-20 hover:bg-red-800"
+                        id="confirme_image">confirme</button>
+
                 </div>
             </div>
         </div>
     </main>
 </body>
-    <script type="module"  src="admin.js"></script>
+<script type="module" src="admin.js"></script>
 
 </html>
