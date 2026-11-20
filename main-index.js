@@ -4,9 +4,13 @@ async function getuser() {
   const response = await fetch(
     `https://6afae847730c1d152f32b6cc.mockapi.io/moviesv2`
   );
+  const responsecomentaire = await fetch("https://6afae847730c1d152f32b6cc.mockapi.io/comentaire")
+
   
    const movies = await response.json();
-
+   const comontaires0 = await responsecomentaire.json()
+  
+   console.log(comontaires0)
   const grid = document.querySelector("#movies-grid");
   const card = document.querySelector("#card");
   const fav = document.querySelector("#fav");
@@ -43,6 +47,7 @@ let pogiantion = document.createElement("ul")
             ${m.releaseYear} · ${m.type}
             <i class="fa-solid fa-plus plus cursor-pointer" style="color: rgb(196, 17, 17);" data-index="${i}"></i>
           </p>
+          <i class="fa-solid fa-message" style="color: rgb(196, 17, 17);"></i>
         </div>`;
     }).join("");
     
@@ -77,6 +82,7 @@ let pogiantion = document.createElement("ul")
     const btn = e.target.closest("button[data-index]");
     if (!btn) return;
     const m = movies[Number(btn.dataset.index)];
+    const c = comontaires0[Number(btn.dataset.index)]
     card.innerHTML = `<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
     <a class="relative left-90 bottom-14" id="exitmovie"><i class="fa-solid fa-x" style="color: rgb(196, 17, 17);"></i></a>
       <div class="box w-full max-w-sm rounded-xl border-2 border-red-600 bg-white p-6 text-black shadow-lg">
@@ -85,10 +91,18 @@ let pogiantion = document.createElement("ul")
         <h3>${m.releaseYear}</h3>
         ${m.seasons ? `<h3>Seasons: ${m.seasons}</h3>` : ""}
         ${m.directors ? `<h3>Directors: ${m.directors}</h3>` : ""}
+
+        <div><i class="fa-solid fa-circle-user" style="color: rgb(196, 17, 17);"></i><h1 class="text-red-600">commentaire</h1>
+        <p>${c.text}</p>
+        <p><i class="fa-solid fa-star" style="color: rgb(196, 17, 17);"></i> =  ${c.rating}</p>
+        </div>
       </div>
     </div>
     <div class="border-2 border-solide-black">
-    </div>`;
+    </div>
+
+    
+    `;
     
     card.classList.remove("hidden");
     const exitmovie = document.querySelector("#exitmovie")
