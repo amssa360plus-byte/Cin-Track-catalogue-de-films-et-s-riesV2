@@ -1,4 +1,4 @@
-async function newmovies(title, directors, releaseYear, genres, production, image, description) {
+export async function newmovies(title, directors, releaseYear, genres, production, image, description) {
     try {
         console.log("sanding.....")
         const response = await fetch("https://6afae847730c1d152f32b6cc.mockapi.io/moviesv2", {
@@ -31,4 +31,4 @@ async function newmovies(title, directors, releaseYear, genres, production, imag
     // )
 
 
-    // all Inpute
+    // all I"npute

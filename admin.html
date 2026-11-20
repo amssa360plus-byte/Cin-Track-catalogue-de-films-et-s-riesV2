@@ -13,7 +13,7 @@
     <!-- JS -->
     <script type="module" src="data.admin.js"></script>
     <script type="module" src="modfy-admin.js"></script>
-    <script src="add.admin.js"></script>
+    <script type="module"src="add-admin.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
         integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
@@ -84,48 +84,43 @@
                         add Movie
                     </h5>
                     <p class="text-gray-600 flex justify-center">
-                        ID
-                    </p>
-                    <input type="text" placeholder="   entre id"
-                        class="border-4 border-red-600 rounded-xl w-[350px]" id="input1">
-                    <p class="text-gray-600 flex justify-center">
                         title Movie
                     </p>
                     <input type="text" placeholder="   entre name MOVIE"
-                        class="border-4 border-red-600 rounded-xl w-[350px]" id="input1">
+                        class="border-4 border-red-600 rounded-xl w-[350px]" id="inputNameMV">
                     <p class="text-gray-600 flex justify-center">
                         derctions
                     </p>
                     <input type="text" placeholder="   entre name derctions"
-                        class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                        class="border-4 border-red-600 rounded-xl  w-[350px]" id="inputderctions">
                     <p class="text-gray-600 flex justify-center">
                         years movie
                     </p>
                     <input type="text" placeholder="   entre Year" class="border-4 border-red-600 rounded-xl  w-[350px]"
-                        id="input1">
+                        id="inputyear01">
                     <p class="text-gray-600 flex justify-center">
                         gernes
                     </p>
                     <input type="text" placeholder="   entre gernes"
-                        class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                        class="border-4 border-red-600 rounded-xl  w-[350px]" id="inputgernes">
                     <p class="text-gray-600 flex justify-center">
                         production countries
                     </p>
                     <input type="text" placeholder="   production countriesn EX : MA, UK"
-                        class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                        class="border-4 border-red-600 rounded-xl  w-[350px]" id="inputpoduction">
                     <p class="text-gray-600 flex justify-center">
                         image
                     </p>
                     <input type="text" placeholder="   entre link image EX: https:/example.com"
-                        class="border-4 border-red-600 rounded-xl  w-[350px]" id="input1">
+                        class="border-4 border-red-600 rounded-xl  w-[350px]" id="inputimage01">
                     <p class="text-gray-600 flex justify-center">
                         description
                     </p>
-                    <textarea id="description" name="description" rows="3"
+                    <textarea id="inputdescription" name="description" rows="3"
                         placeholder="Description du film ou de la série..."
                         class="border-4 border-red-600 rounded-xl w-[350px]"></textarea>
                     <button
-                        class="border border-red rounded-xl bg-red-500 w-87 h-10 relative top-3 hover: bg-red-800">DONE</button>
+                        class="border border-red rounded-xl bg-red-500 w-87 h-10 relative top-3 hover: bg-red-800" id="confirmed_add">DONE</button>
                 </div>
             </div>
         </div>

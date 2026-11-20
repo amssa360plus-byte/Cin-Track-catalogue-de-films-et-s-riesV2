@@ -86,6 +86,8 @@ let pogiantion = document.createElement("ul")
         ${m.seasons ? `<h3>Seasons: ${m.seasons}</h3>` : ""}
         ${m.directors ? `<h3>Directors: ${m.directors}</h3>` : ""}
       </div>
+    </div>
+    <div class="border-2 border-solide-black">
     </div>`;
     
     card.classList.remove("hidden");

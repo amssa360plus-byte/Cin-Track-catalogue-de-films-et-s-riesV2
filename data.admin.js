@@ -1,6 +1,6 @@
 import { deletedata } from "./admin.js"
 import { update } from "./modfy-admin.js"
-
+import{ newmovies } from "./add-admin.js"
 async function getmovies() {
     try {
         const response = await fetch("https://6afae847730c1d152f32b6cc.mockapi.io/moviesv2")
@@ -71,7 +71,6 @@ async function getmovies() {
                     update(btn.dataset.id, { image: idINput })
                 }
 
-                
             })
         })
         const btn_addmovie = document.querySelector("#addmovie")
@@ -84,6 +83,17 @@ async function getmovies() {
     })
     
     })
+    document.querySelector("#confirmed_add").addEventListener("click", ()=>{
+                    const title = document.querySelector("#inputNameMV").value.trim()
+                    const directors = document.querySelector("#inputderctions").value.trim()
+                    const releaseYear = document.querySelector("#inputyear01").value.trim()
+                    const genres = document.querySelector("#inputgernes").value.trim()
+                    const production = document.querySelector("#inputpoduction").value.trim()
+                    const image = document.querySelector("#inputimage01")
+                    const description = document.querySelector("#inputdescription").value.trim()
+                    console.log("bug")
+                    newmovies(title, directors, releaseYear, genres, production, image, description)
+                })
     
 
     }
