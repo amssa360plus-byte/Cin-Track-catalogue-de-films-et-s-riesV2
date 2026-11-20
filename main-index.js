@@ -16,6 +16,8 @@ async function getuser() {
   const fav = document.querySelector("#fav");
   const favcard = document.querySelector("#favcard");
   const input = document.querySelector("#searche");
+  const card_commontaire = document.querySelector("#card_commontaire");
+  let currentMovieIndex = null; 
 
 
 let datamovie = JSON.parse(localStorage.getItem("fav")) || [];
@@ -47,10 +49,10 @@ let pogiantion = document.createElement("ul")
             ${m.releaseYear} · ${m.type}
             <i class="fa-solid fa-plus plus cursor-pointer" style="color: rgb(196, 17, 17);" data-index="${i}"></i>
           </p>
-          <i class="fa-solid fa-message" style="color: rgb(196, 17, 17);"></i>
+          <a class="modalcom cursor-pointer" data-index="${i}"><i class="fa-solid fa-message" style="color: rgb(196, 17, 17);"></i></a>
         </div>`;
     }).join("");
-    
+     
 
     pag.innerHTML = Array.from({ length: Math.ceil(list.length / perPage) }, (_, n) =>
       `<button data-page="${n + 1}" class="mx-1 mb-1 rounded-full border border-red-600 px-3 py-1 ${n + 1 === page ? "bg-red-600 text-black" : "text-red-600"}">${n + 1}</button>`
@@ -72,6 +74,13 @@ let pogiantion = document.createElement("ul")
 
   // ---------- Details + Plus ----------
   grid.addEventListener("click", e => {
+    const msg = e.target.closest(".modalcom");
+    if (msg) {
+      e.preventDefault();
+      currentMovieIndex = Number(msg.dataset.index);
+      card_commontaire.classList.remove("hidden");
+      return;
+    }
     const plus = e.target.closest(".plus");
     if (plus) {
       const m = movies[Number(plus.dataset.index)];
@@ -82,7 +91,7 @@ let pogiantion = document.createElement("ul")
     const btn = e.target.closest("button[data-index]");
     if (!btn) return;
     const m = movies[Number(btn.dataset.index)];
-    const c = comontaires0[Number(btn.dataset.index)]
+    const c = comontaires0.find(x => x.moviesv2Id === m.id) || { text: "No comment yet", rating: "-" };
     card.innerHTML = `<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
     <a class="relative left-90 bottom-14" id="exitmovie"><i class="fa-solid fa-x" style="color: rgb(196, 17, 17);"></i></a>
       <div class="box w-full max-w-sm rounded-xl border-2 border-red-600 bg-white p-6 text-black shadow-lg">
@@ -103,6 +112,7 @@ let pogiantion = document.createElement("ul")
 
     
     `;
+
     
     card.classList.remove("hidden");
     const exitmovie = document.querySelector("#exitmovie")
@@ -115,6 +125,11 @@ let pogiantion = document.createElement("ul")
 
   card.addEventListener("click", e => {
     if (!e.target.closest(".box")) card.classList.add("hidden");
+  });
+
+  // ---------- Fermer card commentaire ----------
+  document.querySelector("#exitCom").addEventListener("click", () => {
+    card_commontaire.classList.add("hidden");
   });
 
   // ---------- Favoris ----------
@@ -153,5 +168,4 @@ let pogiantion = document.createElement("ul")
   render();
 }
 
-getuser().catch(error);
-
+getuser().catch(err => console.error(err));
