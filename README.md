@@ -159,3 +159,52 @@ localStorage.setItem("fav", JSON.stringify(datamovie));
 ## 👤 Auteur
 
 Projet réalisé par **jawad amsa**     
+
+
+
+# CinéTrack — Catalogue de films et séries
+
+Application web de consultation et de gestion d'un catalogue de films et de séries. Cette version ajoute une interface d'administration ainsi que des commentaires associés aux contenus, avec une API REST MockAPI.
+
+## Démo
+
+https://amssa360plus-byte.github.io/Cin-Track-catalogue-de-films-et-s-riesV2/
+
+## Fonctionnalités
+
+- Consulter les films et les séries du catalogue.
+- Gérer les contenus depuis l'administration : affichage, ajout, modification et suppression avec confirmation.
+- Consulter les commentaires depuis la fenêtre de détails d'un contenu et en ajouter.
+- Attribuer et consulter des notes de 1 à 5 étoiles si la fonctionnalité bonus est activée.
+- Afficher les états de chargement et les messages de succès ou d'erreur.
+
+## Technologies
+
+- HTML5 et Tailwind CSS
+- JavaScript moderne (ES6+), organisé en modules
+- Fetch API et async/await pour les échanges REST
+- MockAPI pour le stockage des données
+
+## Configuration de l'API
+
+L'application doit utiliser l'endpoint MockAPI personnel de son auteur. Vérifier la configuration de l'URL de base de l'API dans le code avant d'exécuter le projet ou de le déployer. Les ressources utilisées doivent correspondre aux contenus (films/séries) et aux commentaires.
+
+Ne pas partager publiquement une URL contenant des identifiants ou des clés privées.
+
+## Lancement local
+
+1. Cloner ou télécharger le dépôt du projet.
+2. Configurer l'endpoint MockAPI personnel dans le fichier de configuration API prévu par le projet.
+3. Ouvrir le dossier avec un serveur web local (par exemple l'extension Live Server de VS Code), nécessaire au chargement des modules JavaScript et aux requêtes `fetch`.
+4. Ouvrir la page d'accueil servie localement dans le navigateur.
+
+## Utilisation
+
+1. Parcourir le catalogue et ouvrir les détails d'un film ou d'une série.
+2. Consulter les commentaires et en publier un nouveau depuis la fenêtre de détails.
+3. Ouvrir la page d'administration pour ajouter, modifier ou supprimer un contenu.
+4. Vérifier le résultat des opérations dans l'interface et dans l'endpoint MockAPI configuré.
+
+## Remarque
+
+La modification et la suppression des commentaires ne font pas partie du périmètre demandé. La notation par étoiles est une fonctionnalité bonus.
